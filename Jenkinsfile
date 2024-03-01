@@ -27,8 +27,8 @@ pipeline {
          whoami
 	 echo $access_key
 	 echo $secret_key
-         aws configure set aws_access_key_id $AKIA4LF5FJDQW3ZG7PP2
-         aws configure set aws_secret_access_key $ITGazIKJxLtb1jnQgtNvfONcQQ/rl5BT4Txnx9lH
+         aws configure set aws_access_key_id $access_key
+         aws configure set aws_secret_access_key $secret_key
          aws configure set default.region ap-south-1
          DOCKER_LOGIN_PASSWORD=$(aws ecr get-login-password  --region ap-south-1)
          docker login -u AWS -p $DOCKER_LOGIN_PASSWORD 645624701308.dkr.ecr.ap-south-1.amazonaws.com/demo
